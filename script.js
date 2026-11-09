@@ -102,3 +102,38 @@ vehicles.forEach(function(vehicle) {
     vehicleSelect.appendChild(option);
 });
 
+
+// FEATURE B: CHARGING COST CALCULATOR
+// The calculateChargingCost() function is in calculator.js.
+
+// Find the calculator form and result area.
+const form = document.getElementById("charging-form");
+const result = document.getElementById("result");
+
+// Run the calculator when the button is clicked.
+form.addEventListener("submit", function(event) {
+
+    // Prevent the webpage from refreshing.
+    event.preventDefault();
+
+    try {
+        // Read the number of hours entered by the user.
+        const hours = document.getElementById("charging-hours").value;
+
+        // Calculate the estimated charging cost.
+        const cost = calculateChargingCost(hours);
+
+        // Get the selected vehicle's name.
+        const selectedVehicle =
+            vehicleSelect.options[vehicleSelect.selectedIndex].text;
+
+        // Show the result with two decimal places.
+        result.textContent =
+            selectedVehicle + " - Estimated Charging Cost: $" + cost.toFixed(2);
+
+    } catch (error) {
+
+        // Display an error message if the input is invalid.
+        result.textContent = error.message;
+    }
+});
