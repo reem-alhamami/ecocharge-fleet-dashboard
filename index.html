@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCharge Fleet Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>EcoCharge Fleet Dashboard</h1>
+        <p>Electric Vehicle Fleet Management System</p>
+    </header>
+
+    <main>
+        <!-- Feature A: Fleet Overview -->
+        <section>
+            <h2>Electric Vehicle Fleet Overview</h2>
+            <p>View the battery level and status of each vehicle.</p>
+
+            <div id="fleet-container" class="fleet-grid"></div>
+        </section>
+
+        <!-- Feature B: Charging Calculator -->
+        <section>
+            <h2>Charging Cost Calculator</h2>
+            <p>Calculate the estimated cost of charging a vehicle.</p>
+
+            <form id="charging-form">
+                <label for="vehicle-select">Select Vehicle:</label>
+                <select id="vehicle-select" required></select>
+
+                <label for="charging-hours">Charging Duration (Hours):</label>
+                <input type="number" id="charging-hours"
+                       min="0" step="any"
+                       placeholder="Enter charging hours" required>
+
+                <button type="submit">Calculate Cost</button>
+            </form>
+
+            <p id="result" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

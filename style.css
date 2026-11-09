@@ -1,0 +1,99 @@
+
+/* Main website design */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #24332d;
+    margin: 0;
+}
+
+/* Website title */
+header {
+    background-color: #176b50;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Main page layout */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Separate sections */
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+/* Vehicle cards layout */
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(220px, 1fr)
+    );
+    gap: 15px;
+}
+
+/* Individual electric vehicle */
+.vehicle-card {
+    background-color: #edf5f0;
+    border: 1px solid #d2e3d8;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+/* Battery progress bar */
+.battery-track {
+    background-color: #d6ded9;
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.battery-fill {
+    background-color: #249b68;
+    height: 100%;
+}
+
+/* Calculator form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 420px;
+}
+
+/* Dropdown and input */
+input, select {
+    padding: 12px;
+    border: 1px solid #bbbbbb;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Calculate button */
+button {
+    background-color: #176b50;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #10543e;
+}
+
+/* Charging cost result */
+#result {
+    font-size: 20px;
+    font-weight: bold;
+}
