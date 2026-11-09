@@ -1,0 +1,9 @@
+{
+  "name": "ecocharge-fleet-dashboard",
+  "version": "1.0.0",
+  "description": "ICS 432 Team 2 - EV fleet dashboard prototype",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}
