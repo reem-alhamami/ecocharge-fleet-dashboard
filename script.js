@@ -101,3 +101,4 @@ vehicles.forEach(function(vehicle) {
 
     vehicleSelect.appendChild(option);
 });
+
